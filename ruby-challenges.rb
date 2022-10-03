@@ -10,6 +10,19 @@ num2 = 42
 num3 = 221
 # Expected output: '221 is odd'
 
+def even_or_odd(num)
+    if num.even?
+        "#{num} is even."
+    else
+        "#{num} is odd."
+    end
+end
+p even_or_odd(num1)
+p even_or_odd(num2)
+p even_or_odd(num3)
+
+
+
 
 
 # -------------------2) Create a method that takes in a string and removes all the vowels from the string. Use the test variables provided. 
@@ -22,6 +35,12 @@ beatles_album2 = 'Sgt Pepper'
 beatles_album3 = 'Abbey Road'
 # Expected output: 'bby Rd'
 
+def remove_vowels(input)
+    input.delete "Aaeiou"
+end
+p remove_vowels(beatles_album1)
+p remove_vowels(beatles_album2)
+p remove_vowels(beatles_album3)
 
 
 # -------------------3) Create a method that takes in a string and checks if the string is a palindrome. A palindrome is the same word spelled forward or backward. Use the test variables provided.
@@ -32,3 +51,15 @@ palindrome_tester2 = 'LEARN'
 # Expected output: 'LEARN is not a palindrome'
 palindrome_tester3 = 'Rotator'
 # Expected output: 'Rotator is a palindrome'
+
+def is_it_palindrome(input)
+    if input.downcase === input.downcase.reverse
+        "#{input} is a palindrome"
+    else
+        "#{input} is not a palindrome"
+
+    end
+end
+p is_it_palindrome(palindrome_tester1)
+p is_it_palindrome(palindrome_tester2)
+p is_it_palindrome(palindrome_tester3)
